@@ -8,7 +8,7 @@ const ChatApp = ({ roomId }: any) => {
 
   // Set up WebSocket connection on component mount
   useEffect(() => {
-    ws.current = new WebSocket("ws://localhost:8080");
+    ws.current = new WebSocket("ws://chatbackend:8080");
 
     ws.current.onopen = () => {
       console.log("Connected to WebSocket server");
